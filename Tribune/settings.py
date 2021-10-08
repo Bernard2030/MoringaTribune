@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 
-# from pathlib import Path
+from pathlib import Path
 import os
 import django_heroku
 import dj_database_url
@@ -83,6 +83,18 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'tribune.wsgi.application'
+
+# Database
+# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'tribune',
+        'USER': 'moringa',
+        'PASSWORD':'Access'
+    }
+}
 
 
 
